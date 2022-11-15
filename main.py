@@ -1,4 +1,4 @@
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from tiny_people_sim.World import *
 
 HOST = "localHOST"
@@ -22,7 +22,7 @@ class Frontend(BaseHTTPRequestHandler):
             self.wfile.write(bytes(f"<html><head><title>TPP - {self.path}</title></head>", "utf-8"))
             self.wfile.write(bytes("<body>", "utf-8"))
             self.wfile.write(bytes("<h2>TINY PEOPLE PLACE</h2>", "utf-8"))
-            self.wfile.write(bytes("<p>hallo. you seem lost<br>Try one of these:</p><p>/api<br>/status<br>/info<br>/save or /json</p>", "utf-8"))
+            self.wfile.write(bytes("<p>hallo. you seem lost<br>Try one of these:</p><p><b>/api</b><br><b>/status</b><br><b>/info</b><br><b>/save</b> or <b>/json</b><br>or maybe even <b>/docs</b></p>", "utf-8"))
             self.wfile.write(bytes("</body></html>", "utf-8"))
         elif self.path == "/save" or self.path == "/json":
             self.sendHeaders(status,"application/json")
