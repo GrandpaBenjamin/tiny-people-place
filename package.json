@@ -18,5 +18,8 @@
   "homepage": "https://github.com/GrandpaBenjamin/tiny-people-place#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "cron": "^2.1.0"
   }
 }
