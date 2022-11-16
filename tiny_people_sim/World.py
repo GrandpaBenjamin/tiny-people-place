@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import openai
+from Entities import Human
 
 class World:
     def __init__(self, saveLocation, worldSettings):
@@ -35,11 +36,11 @@ class World:
         newWorldData = {
             "universe": {
                 "name": "New Universe",
-                "creation-date": datetime.datetime.now(),
+                "creation-date": str(datetime.datetime.now()),
                 "planets": [
                     {
                         "name": self.getNewWorldName(),
-                        "creation-date": datetime.datetime.now(),
+                        "creation-date": str(datetime.datetime.now()),
                     },
                 ],
             }
